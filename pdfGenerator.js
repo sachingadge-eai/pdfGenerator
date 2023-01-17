@@ -7,8 +7,8 @@ const host = '0.0.0.0';
 let pdf = (link, name, res) => {
     conversion({ url: link }, function(err, pdf) {
         if(err){
-            throw err
-            return err;
+            console.log('error in pdf', err);
+            throw err;
         }else{
             name = name + '.pdf'
             var output = fs.createWriteStream(__dirname + '/uploads/' + name);
