@@ -17,9 +17,11 @@ let pdf = (link, name, res) => {
 }
 app.get('/generatePDF', (req, res) => {
     if (req.headers.auth_token == 'EAI-PDF-Generate') {
-	let url = decodeURIComponent(req.query.link);
-	console.log(url,"url");     
-pdf(url, req.query.name, res);
+
+        let url = decodeURIComponent(req.query.link);
+        console.log(url,"url");     
+        pdf(url, req.query.name, res);
+        
     } else {
         console.log("access denied");
         res.status(401).send("Access Denied");
