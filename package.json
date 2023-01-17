@@ -1,0 +1,17 @@
+{
+  "name": "demo-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pdfGenerator.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Mahesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "nodemon": "^1.19.1",
+    "phantom-html-to-pdf": "^0.6.0"
+  }
+}
