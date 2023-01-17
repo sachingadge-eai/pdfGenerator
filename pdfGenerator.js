@@ -8,10 +8,12 @@ let pdf = (link, name, res) => {
     conversion({ url: link }, function(err, pdf) {
         if(err){
             throw err
+            return err;
         }else{
             name = name + '.pdf'
             var output = fs.createWriteStream(__dirname + '/uploads/' + name);
             pdf.stream.pipe(res);
+            return true;
         }        
     });
 }
