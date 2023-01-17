@@ -7,13 +7,11 @@ const host = '0.0.0.0';
 let pdf = (link, name, res) => {
     conversion({ url: link }, function(err, pdf) {
         if(err){
-            console.log('error in pdf', err);
-            throw err;
+            throw err
         }else{
             name = name + '.pdf'
             var output = fs.createWriteStream(__dirname + '/uploads/' + name);
             pdf.stream.pipe(res);
-            return true;
         }        
     });
 }
@@ -21,9 +19,7 @@ app.get('/generatePDF', (req, res) => {
     if (req.headers.auth_token == 'EAI-PDF-Generate') {
 	let url = decodeURIComponent(req.query.link);
 	console.log(url,"url");     
-    let response = pdf(url, req.query.name, res);
-	console.log(response,"pdf error");     
-
+pdf(url, req.query.name, res);
     } else {
         console.log("access denied");
         res.status(401).send("Access Denied");
