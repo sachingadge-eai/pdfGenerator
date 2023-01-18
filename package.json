@@ -12,6 +12,7 @@
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "nodemon": "^1.19.1",
-    "phantom-html-to-pdf": "^0.6.0"
-  } 
+    "phantom-html-to-pdf": "^0.6.0",
+    "phantomjs": "^2.1.7"
+  }
 }
