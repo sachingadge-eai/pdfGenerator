@@ -1,12 +1,12 @@
 {
-  "name": "demo-pdf",
+  "name": "PDF Generator",
   "version": "1.0.0",
   "description": "",
   "main": "pdfGenerator.js",
   "scripts": {
     "start": "nodemon --inspect=9229  pdfGenerator.js"
   },
-  "author": "Mahesh",
+  "author": "Sachin",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
